@@ -10,9 +10,10 @@ const options = {
 export const fetchData = async (url: string) => {
   try {
     const response = await fetch(base_url + url, options);
-    const result = await response.text();
 
-    return JSON.parse(result);
+    const result = await response.json();
+
+    return result;
   } catch (error) {
     throw new Error(`Something went wrong: ${error}`);
   }

@@ -1,6 +1,4 @@
-import { IVideo } from "../../types";
-
-const ChannelProfile = ({ channelDetails }: { channelDetails: IVideo }) => {
+const ChannelProfile = ({ channelDetail }) => {
   return <div>ChannelProfile</div>;
 };
 

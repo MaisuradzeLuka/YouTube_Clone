@@ -7,4 +7,4 @@ export { default as Sidebar } from "./Sidebar";
 export { default as Videos } from "./Videos";
 export { default as VideoCard } from "./videoCard/VideoCard";
 export { default as ChannelProfile } from "./videoCard/ChannelProfile";
-export { default as ChannelDetail } from "./ChannelDetail";
+export { default as ChannelCard } from "./videoCard/ChannelCard";

@@ -8,8 +8,8 @@ const Feed = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetchData(`/search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
+    fetchData(`/search?part=snippet&q=${selectedCategory}&maxResults=50`).then(
+      (data) => setVideos(data.items)
     );
   }, [selectedCategory]);
 
