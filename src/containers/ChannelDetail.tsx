@@ -4,9 +4,18 @@ import { useParams } from "react-router-dom";
 
 import { Videos, ChannelCard } from "../components";
 import { fetchData } from "../utils/fetchDataFromApi";
+import { IVideo } from "../types";
+
+interface IChannelDetails extends IVideo {
+  statistics: {
+    subscriberCount: string;
+  };
+}
 
 const ChannelDetail = () => {
-  const [channelDetails, setChannelDetails] = useState(null);
+  const [channelDetails, setChannelDetails] = useState<IChannelDetails | null>(
+    null
+  );
   const [videos, setVideos] = useState([]);
   const { id } = useParams();
 
@@ -35,12 +44,11 @@ const ChannelDetail = () => {
           channelDetails={channelDetails}
           marginTop="-110px"
           subscribers={parseInt(
-            channelDetails?.statistics?.subscriberCount
+            channelDetails?.statistics?.subscriberCount ?? "0"
           ).toLocaleString("en-US")}
         />
       </Box>
       <Box display="flex" p="2">
-        <Box sx={{ mr: { sm: "100px" } }} />
         <Videos videos={videos} />
       </Box>
     </Box>

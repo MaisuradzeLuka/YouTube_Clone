@@ -6,5 +6,4 @@ export { default as SearchBar } from "./navbar/SearchBar";
 export { default as Sidebar } from "./Sidebar";
 export { default as Videos } from "./Videos";
 export { default as VideoCard } from "./videoCard/VideoCard";
-export { default as ChannelProfile } from "./videoCard/ChannelProfile";
 export { default as ChannelCard } from "./videoCard/ChannelCard";
